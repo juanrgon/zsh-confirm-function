@@ -34,8 +34,8 @@ confirm () {
         spaceless_buffer=$(join_by ' ' ${=BUFFER})
         for command in $CONFIRM_COMMAND_LIST
             do
-                if [[ "$spaceless_buffer" = *"$command" ]]; then
-                    BUFFER="_confirm && $command"
+                if [[ "$spaceless_buffer" = "$command"* ]]; then
+                    BUFFER="_confirm && $spaceless_buffer"
                     break
                 fi
             done
