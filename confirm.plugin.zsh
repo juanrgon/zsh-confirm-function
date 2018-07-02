@@ -36,6 +36,6 @@ confirm () {
             fi
         done
     if [[ $found ]]; then
-        export CONFIRM_COMMAND_LIST+=command
+        CONFIRM_COMMAND_LIST+=command
     fi
 }
